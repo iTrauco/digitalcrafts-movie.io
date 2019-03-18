@@ -11,6 +11,9 @@
     <!-- Movie.css -->
     <link rel="stylesheet" href="/Demo/MovieDB/stylesheets/MovieDB.css">
 
+     <!-- GiphyAPI.css -->
+     <link rel="stylesheet" href="/Demo/GiphyAPI/stylesheets/GiphyAPI.css">
+
     <title>Movie.io</title>
   </head>
   <body>
@@ -22,6 +25,23 @@
         </head>
         <body>
 
+             <!-- GiphyAPI Search -->
+         <div class="container">
+                <form id="searchForm">
+                    <div class="input-group mb-3">
+                        <input id="searchInput" type="text" class="form-control" placeholder="Search for a movie"
+                               aria-label="Recipient's username"
+                               aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" id="searchButton">Go</button>
+                        </div>
+                    </div>
+                </form>
+            
+                <div id="thumbs">
+            
+                </div>
+            <!-- MovieDB Search -->
         <div class="movie-content" data-details>
                 <div class ="smallHeader">
                     <h1>MOVIE.IO</h1>
@@ -31,11 +51,11 @@
                     </form>
                 </div>
          </div>
-
+        GiphyAPI Search
          <div class="container">
             <form id="searchForm">
                 <div class="input-group mb-3">
-                    <input id="searchInput" type="text" class="form-control" placeholder="Search for a gifs"
+                    <input id="searchInput" type="text" class="form-control" placeholder="Search for a movie"
                            aria-label="Recipient's username"
                            aria-describedby="button-addon2">
                     <div class="input-group-append">
@@ -70,9 +90,6 @@
 
     <!-- Global.js -->
     <script src="/Demo/GiphyAPI/scripts/global.js"></script>
-
-    <!-- GiphyAPI.css -->
-    <link rel="stylesheet" href="/Demo/GiphyAPI/stylesheets/GiphyAPI.css">
 
   </body>
 </html>
