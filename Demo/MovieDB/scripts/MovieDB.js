@@ -1,11 +1,7 @@
-
-// (function () {
-//     function fetchMoviesFromUserInput(keyword) {
-//       return fetch(`https://api.themoviedb.org/3/search/movie?api_key=${MovieDB_KEY}&language=en-US&query=${keyword}&page=1`)
-//         .then(response => response.json());
-//     }
-
     async function fetchMoviesFromUserInput(searchQuery) {
+console.log('lordt help me');
+
+async function fetchMoviesFromUserInput(searchQuery) {
     const API_URL = `https://api.themoviedb.org/3/search/movie?api_key=4e818663c4f334a33277fd88c377dea4&language=en-US&query=${searchQuery}&page=1&include_adult=false`
     const response = await fetch(API_URL);
     const searchResults = await response.json();
@@ -21,9 +17,11 @@ async function movieSearch() {
         renderMovieResults(results); // TODO: render these movies into the DOM
 
 function renderMovieResults(movies) {
+    clearMovieResults();
+    
     /** get parent (container) element that will hold the list of movies */
     movies.forEach(movie => {
-    
+
         const titleElement = document.createElement("h1");
         titleElement.textContent = movie.title; 
 
