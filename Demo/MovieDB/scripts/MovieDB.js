@@ -31,26 +31,29 @@ async function movieSearch() {
         renderMovieResults(results); // TODO: render these movies into the DOM
         hideVideo();
         hideHeader();
-    
 
 function renderMovieResults(movies) {
     clearMovieResults();
     /** get parent (container) element that will hold the list of movies */
     movies.forEach(movie => {
-
-        const titleElement = document.createElement("h1");
-        titleElement.textContent = movie.title; 
-
+    
         const detailArea = document.querySelector("[data-details]");
-        detailArea.appendChild(titleElement);
 
-        const movieDescriptionElement = document.createElement("p");
-        movieDescriptionElement.textContent = movie.overview;
-        detailArea.appendChild(movieDescriptionElement);
+        const movieResultDiv = document.createElement("div");
+        movieResultDiv.innerHTML = `
+        <div class="movie-result">
+        <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}">
+        <div class="overlay">
+        <div class="text">
+            <h3>${movie.title}</h3>
+            <p>${movie.overview}</p>
+            </div>
+            <div>
+        </div>
+        `;
 
-        const moviePosterElement = document.createElement("img");
-        moviePosterElement.setAttribute('src', `https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`);
-        detailArea.appendChild(moviePosterElement);
+        detailArea.appendChild(movieResultDiv);
+
 });
 }
 
