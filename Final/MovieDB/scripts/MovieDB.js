@@ -5,6 +5,7 @@
 //     mainClick = loadSound("/Media/audio/Dolphins Clicks-SoundBible.com-1458516263.mp3");
 // }
 async function fetchMoviesFromUserInput(searchQuery) {
+
     const API_URL = `https://api.themoviedb.org/3/search/movie?api_key=${MOVIE_KEY}&language=en-US&query=${searchQuery}&page=1&include_adult=false`;
     const response = await fetch(API_URL);
     const searchResults = await response.json();
