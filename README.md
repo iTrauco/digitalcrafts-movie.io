@@ -1,6 +1,6 @@
 # digitalcrafts-movie.io
 
-| Development Team   | 
+| Purpose   | 
 | ------------- |
 | Frontend web development project |
 
